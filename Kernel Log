@@ -1,0 +1,904 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] Linux version 5.4.213 (lingjp@lingjp) (gcc version 12.3.0 (OpenWrt GCC 12.3.0 r0-db4361aef)) #0 SMP PREEMPT Sun Dec 15 07:22:42 2024
+[    0.000000] Machine model: Arcadyan AW1000 IPQ8074
+[    0.000000] Reserved memory: created DMA memory pool at 0x000000004a300000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node tzapp_data@4a300000, compatible id shared-dma-pool
+[    0.000000] On node 0 totalpages: 229888
+[    0.000000]   DMA32 zone: 3592 pages used for memmap
+[    0.000000]   DMA32 zone: 0 pages reserved
+[    0.000000]   DMA32 zone: 229888 pages, LIFO batch:63
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] percpu: Embedded 24 pages/cpu s59800 r8192 d30312 u98304
+[    0.000000] pcpu-alloc: s59800 r8192 d30312 u98304 alloc=24*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: kernel page table isolation disabled by kernel configuration
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 226296
+[    0.000000] Kernel command line: console=ttyMSM0,115200n8 pcie_dev=RG50 ubi.mtd=rootfs root=mtd:ubi_rootfs rootfstype=squashfs rootwait root=/dev/ubiblock0_1 swiotlb=1 coherent_pool=2M
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 889372K/919552K available (7614K kernel code, 586K rwdata, 2216K rodata, 576K init, 416K bss, 30180K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv2m: range[mem 0x0b00a000-0x0b00affc], SPI[448:479]
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000005] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000490] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000503] pid_max: default: 32768 minimum: 301
+[    0.000652] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.000666] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.002157] ASID allocator initialised with 65536 entries
+[    0.002256] rcu: Hierarchical SRCU implementation.
+[    0.004235] MSM Memory Dump base table set up
+[    0.004258] MSM Memory Dump apps data table set up
+[    0.004510] smp: Bringing up secondary CPUs ...
+[    0.005151] Detected VIPT I-cache on CPU1
+[    0.005207] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    0.005877] Detected VIPT I-cache on CPU2
+[    0.005914] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+[    0.006519] Detected VIPT I-cache on CPU3
+[    0.006552] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+[    0.006630] smp: Brought up 1 node, 4 CPUs
+[    0.006653] SMP: Total of 4 processors activated.
+[    0.006660] CPU features: detected: 32-bit EL0 Support
+[    0.006667] CPU features: detected: CRC32 instructions
+[    0.006712] CPU features: emulated: Privileged Access Never (PAN) using TTBR0_EL1 switching
+[    0.006720] CPU: All CPU(s) started at EL1
+[    0.007034] alternatives: patching kernel code
+[    0.021608] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.021635] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.021777] pinctrl core: initialized pinctrl subsystem
+[    0.022939] NET: Registered protocol family 16
+[    0.023620] DMA: preallocated 2048 KiB pool for atomic allocations
+[    0.024112] cpuidle: using governor ladder
+[    0.024140] cpuidle: using governor menu
+[    0.024293] NET: Registered protocol family 42
+[    0.024528] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.027540] gpiochip_find_base: found new base at 442
+[    0.027700] gpio gpiochip0: (1000000.pinctrl): added GPIO chardev (254:0)
+[    0.027772] gpiochip_setup_dev: registered GPIOs 442 to 511 on device: gpiochip0 (1000000.pinctrl)
+[    0.027787] gpio gpiochip0: (1000000.pinctrl): created GPIO range 0->69 ==> 1000000.pinctrl PIN 0->69
+[    0.051258] spmi spmi-0: PMIC arbiter version v2 (0x20010000)
+[    0.070336] qcom,cpr4-apss-regulator b018000.cpr4-ctrl: CPR valid fuse count: 4
+[    0.070635] qcom,cpr3-npu-regulator a4000.npu-cpr: NPU CPR valid fuse count: 2
+[    0.072293] msm_sps_probe: sps:sps is ready
+[    1.865797] reg-fixed-voltage soc:dummy-regulator@0: GPIO lookup for consumer (null)
+[    1.865808] reg-fixed-voltage soc:dummy-regulator@0: using device tree for GPIO lookup
+[    1.865832] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/soc/dummy-regulator@0[0]'
+[    1.865848] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/soc/dummy-regulator@0[0]'
+[    1.865858] reg-fixed-voltage soc:dummy-regulator@0: using lookup tables for GPIO lookup
+[    1.865866] reg-fixed-voltage soc:dummy-regulator@0: No GPIO consumer (null) found
+[    1.866136] reg-fixed-voltage fixed-regulator@0: GPIO lookup for consumer (null)
+[    1.866143] reg-fixed-voltage fixed-regulator@0: using device tree for GPIO lookup
+[    1.866160] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/fixed-regulator@0[0]'
+[    1.866176] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/fixed-regulator@0[0]'
+[    1.866184] reg-fixed-voltage fixed-regulator@0: using lookup tables for GPIO lookup
+[    1.866191] reg-fixed-voltage fixed-regulator@0: No GPIO consumer (null) found
+[    1.866961] pps_core: LinuxPPS API ver. 1 registered
+[    1.866971] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.866991] PTP clock support registered
+[    1.867818] Advanced Linux Sound Architecture Driver Initialized.
+[    1.867874] workqueue: max_active 576 requested for napi_workq is out of range, clamping between 1 and 512
+[    1.868787] clocksource: Switched to clocksource arch_sys_counter
+[    1.869585] thermal_sys: Registered thermal governor 'step_wise'
+[    1.869589] thermal_sys: Registered thermal governor 'user_space'
+[    1.871783] NET: Registered protocol family 2
+[    1.871942] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    1.872821] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes, linear)
+[    1.872856] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    1.872946] TCP bind hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    1.873092] TCP: Hash tables configured (established 8192 bind 8192)
+[    1.873184] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    1.873221] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    1.873399] NET: Registered protocol family 1
+[    1.873430] PCI: CLS 0 bytes, default 64
+[    1.874595] hw perfevents: enabled with armv8_cortex_a53 PMU driver, 7 counters available
+[    1.875559] Initialise system trusted keyrings
+[    1.875788] workingset: timestamp_bits=46 max_order=18 bucket_order=0
+[    1.881499] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.881509] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    1.900897] Key type asymmetric registered
+[    1.900906] Asymmetric key parser 'x509' registered
+[    1.903873] qcom-qmp-phy 78000.ssphy: 78000.ssphy supply vdda-phy not found, using dummy regulator
+[    1.903941] qcom-qmp-phy 78000.ssphy: 78000.ssphy supply vdda-pll not found, using dummy regulator
+[    1.904508] qcom-qmp-phy 78000.ssphy: Registered Qcom-QMP phy
+[    1.904667] qcom-qmp-phy 58000.ssphy: 58000.ssphy supply vdda-phy not found, using dummy regulator
+[    1.904724] qcom-qmp-phy 58000.ssphy: 58000.ssphy supply vdda-pll not found, using dummy regulator
+[    1.905175] qcom-qmp-phy 58000.ssphy: Registered Qcom-QMP phy
+[    1.905683] qcom-qmp-phy 84000.phy: Registered Qcom-QMP phy
+[    1.905774] qcom-qmp-phy: probe of 86000.phy failed with error -13
+[    1.906248] qcom-qmp-phy 8e000.phy: Registered Qcom-QMP phy
+[    1.907630] qcom-pcie 20000000.pci: GPIO lookup for consumer perst
+[    1.907638] qcom-pcie 20000000.pci: using device tree for GPIO lookup
+[    1.907660] of_get_named_gpiod_flags: can't parse 'perst-gpios' property of node '/soc/pci@20000000[0]'
+[    1.907688] of_get_named_gpiod_flags: parsed 'perst-gpio' property of node '/soc/pci@20000000[0]' - status (0)
+[    1.907910] qcom-pcie 20000000.pci: IRQ mdm2ap_e911 not found
+[    1.907951] qcom-pcie 20000000.pci: host bridge /soc/pci@20000000 ranges:
+[    1.907990] qcom-pcie 20000000.pci:    IO 0x20200000..0x2020ffff -> 0x20200000
+[    1.908020] qcom-pcie 20000000.pci:   MEM 0x20220000..0x2fffffff -> 0x20220000
+[   42.046064] qcom-pcie 20000000.pci: Phy link never came up. PARF_LTSSM: 0x100
+[   42.047638] qcom-pcie 20000000.pci: cannot initialize host
+[   42.047751] qcom-pcie: probe of 20000000.pci failed with error -110
+[   42.049118] bam-dma-engine 704000.dma: num-channels unspecified in dt
+[   42.049130] bam-dma-engine 704000.dma: num-ees unspecified in dt
+[   42.049802] bam-dma-engine 7884000.dma: qcom,controlled-remotely unspecified
+[   42.051346] bam-dma-engine 7984000.dma: qcom,controlled-remotely unspecified
+[   42.052123] msm-dcc b3000.dcc: DCC XPU is not specified
+[   42.052360] msm-dcc b3000.dcc: jiffies_64: 0xffff9b3c, cntvct_64: 0x35ec6ac8
+[   42.052373] msm-dcc b3000.dcc: gcnt_hi: 0x00000000(0x(____ptrval____))
+[   42.052384] msm-dcc b3000.dcc: gcnt_lo: 0x35ec6cb9(0x(____ptrval____))
+[   42.052845] global timer is null
+[   42.053117] CPU: IPQ8072A, SoC Version: 2.0
+[   42.053124] OEM_ID: 0, PROD_ID: 0
+[   42.053129] CPU Serial Num: 4043094140
+[   42.053557] msm_rpm_log_probe: OK
+[   42.053787] TZ SMMU State: SMMU Stage2 Enabled
+[   42.053850] TZ Log : Will warn on Access Violation, as paniconaccessviolation is not set
+[   42.054119] Minidump: rsvd region is not specified 
+[   42.054710] pmd9655_s3: supplied by e-smps1-reg
+[   42.055053] pmd9655_s4: supplied by e-smps1-reg
+[   42.055498] pmd9655_ldo11: supplied by e-smps1-reg
+[   42.056017] msm_serial 78b3000.serial: msm_serial: detected port #0
+[   42.056054] msm_serial 78b3000.serial: uartclk = 3686400
+[   42.056107] 78b3000.serial: ttyMSM0 at MMIO 0x78b3000 (irq = 12, base_baud = 230400) is a MSM
+[   42.056131] msm_serial: console setup on port #0
+[   42.843446] printk: console [ttyMSM0] enabled
+[   42.848370] msm_serial: driver initialized
+[   42.852753] random: crng init done
+[   42.863535] brd: module loaded
+[   42.867140] loop: module loaded
+[   42.868888] nand: device found, Manufacturer ID: 0x98, Chip ID: 0xa3
+[   42.869083] nand: Toshiba TH58NYG3S0H 8G 1.8V 8-bit
+[   42.875680] nand: 1024 MiB, SLC, erase size: 256 KiB, page size: 4096, OOB size: 256
+[   42.880450] 26 fixed-partitions partitions found on MTD device qcom_nand.0
+[   42.888268] Creating 26 MTD partitions on "qcom_nand.0":
+[   42.894977] 0x000000000000-0x000000100000 : "0:SBL1"
+[   42.901579] 0x000000100000-0x000000200000 : "0:MIBIB"
+[   42.906419] 0x000000200000-0x000000280000 : "0:BOOTCONFIG"
+[   42.911163] 0x000000280000-0x000000300000 : "0:BOOTCONFIG1"
+[   42.916532] 0x000000300000-0x000000600000 : "0:QSEE"
+[   42.923238] 0x000000600000-0x000000900000 : "0:QSEE_1"
+[   42.928402] 0x000000900000-0x000000980000 : "0:DEVCFG"
+[   42.932179] 0x000000980000-0x000000a00000 : "0:DEVCFG_1"
+[   42.937281] 0x000000a00000-0x000000a80000 : "0:APDP"
+[   42.942768] 0x000000a80000-0x000000b00000 : "0:APDP_1"
+[   42.947698] 0x000000b00000-0x000000b80000 : "0:RPM"
+[   42.952671] 0x000000b80000-0x000000c00000 : "0:RPM_1"
+[   42.957475] 0x000000c00000-0x000000c80000 : "0:CDT"
+[   42.962648] 0x000000c80000-0x000000d00000 : "0:CDT_1"
+[   42.967333] 0x000000d00000-0x000000d80000 : "0:APPSBLENV"
+[   42.972545] 0x000000d80000-0x000000e80000 : "0:APPSBL"
+[   42.978135] 0x000000e80000-0x000000f80000 : "0:APPSBL_1"
+[   42.983199] 0x000000f80000-0x000001000000 : "0:ART"
+[   42.988409] 0x000001000000-0x000007400000 : "rootfs"
+[   43.038334] mtd: device 18 (rootfs) set to be root filesystem
+[   43.038843] mtdsplit: no squashfs found in "rootfs"
+[   43.043062] 0x000007400000-0x000008c80000 : "0:WIFIFW"
+[   43.059534] 0x000008c80000-0x00000f080000 : "rootfs_1"
+[   43.105679] 0x00000f080000-0x000010900000 : "0:WIFIFW_1"
+[   43.117470] 0x000010900000-0x000010b40000 : "0:ETHPHYFW"
+[   43.119183] 0x000010b40000-0x000010c40000 : "0:board_data"
+[   43.122909] 0x000010c40000-0x000011440000 : "0:arc_datadump"
+[   43.131391] 0x000011440000-0x00003e000000 : "0:arc_data"
+[   43.460076] spi_qup 78b8000.spi: IN:block:16, fifo:64, OUT:block:16, fifo:64
+[   43.461590] mdio_bus fixed-0: GPIO lookup for consumer reset
+[   43.461599] mdio_bus fixed-0: using lookup tables for GPIO lookup
+[   43.461607] mdio_bus fixed-0: No GPIO consumer reset found
+[   43.461957] of_get_named_gpiod_flags: parsed 'phy-reset-gpio' property of node '/soc/mdio@90000[0]' - status (0)
+[   43.461965] qca-mdio 90000.mdio: Reset PHY by GPIO 479
+[   43.686277] of_get_named_gpiod_flags: parsed 'phy-reset-gpio' property of node '/soc/mdio@90000[1]' - status (0)
+[   43.686285] qca-mdio 90000.mdio: Reset PHY by GPIO 506
+[   43.906458] mdio_bus 90000.mdio: GPIO lookup for consumer reset
+[   43.906466] mdio_bus 90000.mdio: using device tree for GPIO lookup
+[   43.906484] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/soc/mdio@90000[0]'
+[   43.906501] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/soc/mdio@90000[0]'
+[   43.906511] mdio_bus 90000.mdio: using lookup tables for GPIO lookup
+[   43.906518] mdio_bus 90000.mdio: No GPIO consumer reset found
+[   43.906812] mdio_bus 90000.mdio:00: GPIO lookup for consumer reset
+[   43.906819] mdio_bus 90000.mdio:00: using device tree for GPIO lookup
+[   43.906837] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/soc/mdio@90000/ethernet-phy@0[0]'
+[   43.906853] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/soc/mdio@90000/ethernet-phy@0[0]'
+[   43.906861] mdio_bus 90000.mdio:00: using lookup tables for GPIO lookup
+[   43.906868] mdio_bus 90000.mdio:00: No GPIO consumer reset found
+[   43.907171] mdio_bus 90000.mdio:01: GPIO lookup for consumer reset
+[   43.907179] mdio_bus 90000.mdio:01: using device tree for GPIO lookup
+[   43.907196] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/soc/mdio@90000/ethernet-phy@1[0]'
+[   43.907213] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/soc/mdio@90000/ethernet-phy@1[0]'
+[   43.907221] mdio_bus 90000.mdio:01: using lookup tables for GPIO lookup
+[   43.907228] mdio_bus 90000.mdio:01: No GPIO consumer reset found
+[   43.907506] mdio_bus 90000.mdio:02: GPIO lookup for consumer reset
+[   43.907514] mdio_bus 90000.mdio:02: using device tree for GPIO lookup
+[   43.907531] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/soc/mdio@90000/ethernet-phy@2[0]'
+[   43.907548] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/soc/mdio@90000/ethernet-phy@2[0]'
+[   43.907556] mdio_bus 90000.mdio:02: using lookup tables for GPIO lookup
+[   43.907563] mdio_bus 90000.mdio:02: No GPIO consumer reset found
+[   43.907824] mdio_bus 90000.mdio:03: GPIO lookup for consumer reset
+[   43.907831] mdio_bus 90000.mdio:03: using device tree for GPIO lookup
+[   43.907849] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/soc/mdio@90000/ethernet-phy@3[0]'
+[   43.907865] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/soc/mdio@90000/ethernet-phy@3[0]'
+[   43.907873] mdio_bus 90000.mdio:03: using lookup tables for GPIO lookup
+[   43.907881] mdio_bus 90000.mdio:03: No GPIO consumer reset found
+[   43.908134] mdio_bus 90000.mdio:04: GPIO lookup for consumer reset
+[   43.908141] mdio_bus 90000.mdio:04: using device tree for GPIO lookup
+[   43.908159] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/soc/mdio@90000/ethernet-phy@4[0]'
+[   43.908175] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/soc/mdio@90000/ethernet-phy@4[0]'
+[   43.908184] mdio_bus 90000.mdio:04: using lookup tables for GPIO lookup
+[   43.908191] mdio_bus 90000.mdio:04: No GPIO consumer reset found
+[   43.908441] mdio_bus 90000.mdio:1c: GPIO lookup for consumer reset
+[   43.908448] mdio_bus 90000.mdio:1c: using device tree for GPIO lookup
+[   43.908466] of_get_named_gpiod_flags: can't parse 'reset-gpios' property of node '/soc/mdio@90000/ethernet-phy@5[0]'
+[   43.908482] of_get_named_gpiod_flags: can't parse 'reset-gpio' property of node '/soc/mdio@90000/ethernet-phy@5[0]'
+[   43.908490] mdio_bus 90000.mdio:1c: using lookup tables for GPIO lookup
+[   43.908497] mdio_bus 90000.mdio:1c: No GPIO consumer reset found
+[   43.908763] qca-mdio 90000.mdio: qca-mdio driver was registered
+[   43.908982] i2c /dev entries driver
+[   43.918375] device-mapper: ioctl: 4.41.0-ioctl (2019-09-16) initialised: dm-devel@redhat.com
+[   43.918409] device-mapper: req-crypt: dm-req-crypt successfully initalized.
+[   43.918409] 
+[   44.004523] alg: aead: ccm-aes-qce encryption test failed (wrong result) on test vector 0, cfg="in-place"
+[   44.009037] alg: aead: rfc4309-ccm-aes-qce encryption test failed (wrong result) on test vector 0, cfg="in-place"
+[   44.013610] qcom_ice_get_device_tree_data: No vdd-hba-supply regulator, assuming not needed
+[   44.023481] ICE IRQ = 13
+[   44.032003] sdhci: Secure Digital Host Controller Interface driver
+[   44.034248] sdhci: Copyright(c) Pierre Ossman
+[   44.040269] sdhci-pltfm: SDHCI platform and OF driver helper
+[   44.045074] 
+[   44.045074] Version Rollback Feature Disabled
+[   44.051810] remoteproc remoteproc0: cd00000.q6v5_wcss is available
+[   44.056357] SPMI VADC - Min ch: 0 Max ch: 15
+[   44.064163] coresight-tmc 6027000.tmc: failed to get flush cti, defer probe
+[   44.066883] coresight-dynamic-funnel 6021000.funnel: Uses obsolete Coresight DT bindings
+[   44.075060] coresight coresight-etm0: CPU0: ETM v4.0 initialized
+[   44.081686] coresight-etm4x 619c000.etm: CPU0: (null) initialized
+[   44.088009] coresight coresight-etm1: CPU1: ETM v4.0 initialized
+[   44.093670] coresight-etm4x 619d000.etm: CPU1: (null) initialized
+[   44.100104] coresight coresight-etm2: CPU2: ETM v4.0 initialized
+[   44.105693] coresight-etm4x 619e000.etm: CPU2: (null) initialized
+[   44.112149] coresight coresight-etm3: CPU3: ETM v4.0 initialized
+[   44.117759] coresight-etm4x 619f000.etm: CPU3: (null) initialized
+[   44.124066] coresight-stm 6002000.stm: coresight-stm : stm_register_device failed, probing deferred
+[   44.129966] OF: graph: no port node found in /soc/cti@6010000
+[   44.138883] OF: graph: no port node found in /soc/cti@6011000
+[   44.144758] OF: graph: no port node found in /soc/cti@6012000
+[   44.150499] OF: graph: no port node found in /soc/cti@6013000
+[   44.156217] OF: graph: no port node found in /soc/cti@6014000
+[   44.161968] OF: graph: no port node found in /soc/cti@6015000
+[   44.167675] OF: graph: no port node found in /soc/cti@6016000
+[   44.173424] OF: graph: no port node found in /soc/cti@6017000
+[   44.179172] OF: graph: no port node found in /soc/cti@6018000
+[   44.184868] OF: graph: no port node found in /soc/cti@6019000
+[   44.190619] OF: graph: no port node found in /soc/cti@601a000
+[   44.196323] OF: graph: no port node found in /soc/cti@601b000
+[   44.202068] OF: graph: no port node found in /soc/cti@601c000
+[   44.207784] OF: graph: no port node found in /soc/cti@601d000
+[   44.213540] OF: graph: no port node found in /soc/cti@601e000
+[   44.219259] OF: graph: no port node found in /soc/cti@601f000
+[   44.224968] OF: graph: no port node found in /soc/cti@6198000
+[   44.230726] OF: graph: no port node found in /soc/cti@6199000
+[   44.236433] OF: graph: no port node found in /soc/cti@619a000
+[   44.242180] OF: graph: no port node found in /soc/cti@619b000
+[   44.247893] OF: graph: no port node found in /soc/cti@610c000
+[   44.254479] OF: graph: no port node found in /soc/hwevent@6101000
+[   44.259185] coresight-hwevent 6101000.hwevent: No csr data
+[   44.265527] OF: graph: no port node found in /soc/csr@6001000
+[   44.270723] coresight-csr 6001000.csr: CSR initialized: coresight-csr
+[   44.278899] NET: Registered protocol family 10
+[   44.283731] Segment Routing with IPv6
+[   44.287261] NET: Registered protocol family 17
+[   44.291043] Bridge firewalling registered
+[   44.295366] 8021q: 802.1Q VLAN Support v1.8
+[   44.299726] Loading compiled-in X.509 certificates
+[   44.321604] qcom,cpr4-apss-regulator b018000.cpr4-ctrl: CPR valid fuse count: 4
+[   44.321859] cpr4_ipq807x_apss_read_fuse_data: apc_corner: speed bin = 0
+[   44.327721] cpr4_ipq807x_apss_read_fuse_data: apc_corner: CPR fusing revision = 1
+[   44.334397] cpr4_ipq807x_apss_read_fuse_data: apc_corner: CPR misc fuse value = 0
+[   44.341997] cpr4_ipq807x_apss_read_fuse_data: apc_corner: Voltage boost fuse config = 0 boost = disable
+[   44.349524] cpr3_mem_acc_init: apc: not using memory accelerator regulator
+[   44.358626] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused      SVS: open-loop= 712000 uV
+[   44.365589] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused      NOM: open-loop= 840000 uV
+[   44.375566] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused    TURBO: open-loop= 904000 uV
+[   44.385377] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused   STURBO: open-loop=1016000 uV
+[   44.395260] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused      SVS: quot[ 7]= 698, quot_offset[ 7]=   0
+[   44.405000] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused      NOM: quot[ 7]= 924, quot_offset[ 7]= 225
+[   44.415847] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused    TURBO: quot[ 7]=1023, quot_offset[ 7]=  95
+[   44.426786] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused   STURBO: quot[ 7]=1200, quot_offset[ 7]= 175
+[   44.437872] cpr3_regulator_init_ctrl: apc: Default CPR mode = closed-loop
+[   44.438686] qcom,cpr3-npu-regulator a4000.npu-cpr: NPU CPR valid fuse count: 2
+[   44.455609] cpr3_mem_acc_init: npu: not using memory accelerator regulator
+[   44.462546] npu_corner: fused      NOM: open-loop= 800000 uV
+[   44.469396] npu_corner: fused    TURBO: open-loop= 880000 uV
+[   44.475243] npu_corner: fused      NOM: open-loop= 800000 uV
+[   44.480857] npu_corner: fused    TURBO: open-loop= 880000 uV
+[   44.486509] npu_corner: Normal and Cold condition init done. Default to normal.
+[   44.492863] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[   44.499191] cpu cpu0: _opp_add: OPP not supported by regulators (0)
+[   44.508737] cpufreq: cpufreq_online: CPU0: Running at unlisted freq: 800000 KHz
+[   44.514473] cpufreq: cpufreq_online: CPU0: Unlisted initial frequency changed to: 1017600 KHz
+[   44.521901] sps_register_bam_device: sps:BAM 0x0000000006044000 is registered
+[   44.530743] coresight coresight-stm: STM32 initialized
+[   44.537480] ubi0: attaching mtd18
+[   44.924558] ubi0: scanning is finished
+[   44.930173] ubi0: attached mtd18 (name "rootfs", size 100 MiB)
+[   44.930192] ubi0: PEB size: 262144 bytes (256 KiB), LEB size: 253952 bytes
+[   44.934886] ubi0: min./max. I/O unit sizes: 4096/4096, sub-page size 4096
+[   44.941752] ubi0: VID header offset: 4096 (aligned 4096), data offset: 8192
+[   44.948601] ubi0: good PEBs: 400, bad PEBs: 0, corrupted PEBs: 0
+[   44.955376] ubi0: user volume: 3, internal volumes: 1, max. volumes count: 128
+[   44.961629] ubi0: max/mean erase counter: 35/15, WL threshold: 4096, image sequence number: 1734247362
+[   44.968658] ubi0: available PEBs: 0, total reserved PEBs: 400, PEBs reserved for bad PEB handling: 80
+[   44.977972] ubi0: background thread "ubi_bgt0d" started, PID 165
+[   44.978728] block ubiblock0_1: created from ubi0:1(rootfs)
+[   44.993315] hctosys: unable to open rtc device (rtc0)
+[   44.999183] ALSA device list:
+[   45.003716]   No soundcards found.
+[   45.009340] VFS: Mounted root (squashfs filesystem) readonly on device 253:0.
+[   45.010137] Freeing unused kernel memory: 576K
+[   45.038815] Run /sbin/init as init process
+[   45.171778] init: Console is alive
+[   45.171997] init: - watchdog -
+[   46.351818] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[   46.364998] usbcore: registered new interface driver usbfs
+[   46.365041] usbcore: registered new interface driver hub
+[   46.369424] usbcore: registered new device driver usb
+[   46.377017] Button Hotplug driver version 0.4.1
+[   46.382477] of_get_named_gpiod_flags: parsed 'gpios' property of node '/gpio_keys/wlan[0]' - status (0)
+[   46.382498] gpio-444 (wlan): gpiod_set_debounce: missing set() or set_config() operations
+[   46.382506] of_get_named_gpiod_flags: parsed 'gpios' property of node '/gpio_keys/wps[0]' - status (0)
+[   46.382513] gpio-504 (wps): gpiod_set_debounce: missing set() or set_config() operations
+[   46.382521] of_get_named_gpiod_flags: parsed 'gpios' property of node '/gpio_keys/reset[0]' - status (0)
+[   46.382527] gpio-509 (reset): gpiod_set_debounce: missing set() or set_config() operations
+[   46.384308] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[   46.386527] SCSI subsystem initialized
+[   46.392240] ehci-fsl: Freescale EHCI Host controller driver
+[   46.394980] ehci-platform: EHCI generic platform driver
+[   46.403432] libata version 3.00 loaded.
+[   46.465852] usbcore: registered new interface driver usb-storage
+[   46.466129] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[   46.477127] init: - preinit -
+[   47.957433] UBIFS (ubi0:2): Mounting in unauthenticated mode
+[   47.957557] UBIFS (ubi0:2): background thread "ubifs_bgt0_2" started, PID 285
+[   48.016722] UBIFS (ubi0:2): recovery needed
+[   48.177284] UBIFS (ubi0:2): recovery completed
+[   48.177373] UBIFS (ubi0:2): UBIFS: mounted UBI device 0, volume 2, name "rootfs_data"
+[   48.180668] UBIFS (ubi0:2): LEB size: 253952 bytes (248 KiB), min./max. I/O unit sizes: 4096 bytes/4096 bytes
+[   48.188533] UBIFS (ubi0:2): FS size: 38854656 bytes (37 MiB, 153 LEBs), journal size 2031617 bytes (1 MiB, 8 LEBs)
+[   48.198423] UBIFS (ubi0:2): reserved for root: 1835200 bytes (1792 KiB)
+[   48.208659] UBIFS (ubi0:2): media format: w5/r0 (latest is w5/r0), UUID A0DC0DCA-621C-4270-BE8E-BE1D0CFACD6E, small LPT model
+[   48.220640] mount_root: switching to ubifs overlay
+[   48.235844] urandom-seed: Seeding with /etc/urandom.seed
+[   48.253546] procd: - early -
+[   48.253603] procd: - watchdog -
+[   48.784980] procd: - watchdog -
+[   48.785249] procd: - ubus -
+[   48.838350] procd: - init -
+[   48.914012] Skip QCA8074V1 in V2 platform
+[   48.914359] cnss[2]: INFO: Platform driver probed successfully. plat 0x000000003d11ac12 tgt 0xfffe
+[   48.917801] cnss: INFO: cnss_plat_ipc_qmi_svc_init: CNSS Platform IPC QMI Service is started
+[   49.178883] urngd: v1.0.2 started.
+[   49.255861] kmodloader: loading kernel modules from /etc/modules.d/*
+[   49.259052] cnss: INFO: cnss_plat_ipc_qmi_reg_client_req_handler: QMI Client Connected. QMI Socket Node: 1 Port: 16391 ID: 1
+[   49.261290] cnss: INFO: CNSS Daemon connected
+[   49.273296] cnss: INFO: cnss_plat_ipc_qmi_init_setup_req_handler: MAC: 0 HW_TRC: 0 CAL: 0
+[   49.278204] NET: Registered protocol family 38
+[   49.306478] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   49.414925] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   49.416719] ntfs: driver 2.1.32 [Flags: R/O MODULE].
+[   49.420712] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[   49.425466] platform regulatory.0: Falling back to sysfs fallback for: regulatory.db
+[   49.435133] NET: Registered protocol family 15
+[   49.444033] Initializing XFRM netlink socket
+[   49.446789] mpls_gso: MPLS GSO support
+[   49.471033] cfg80211: failed to load regulatory.db
+[   49.573877] of_get_named_gpiod_flags: parsed 'phy-reset-gpio' property of node '/soc/mdio@90000[0]' - status (0)
+[   49.573921] of_get_named_gpiod_flags: parsed 'phy-reset-gpio' property of node '/soc/mdio@90000[0]' - status (0)
+[   49.573959] of_get_named_gpiod_flags: parsed 'phy-reset-gpio' property of node '/soc/mdio@90000[0]' - status (0)
+[   49.573997] of_get_named_gpiod_flags: parsed 'phy-reset-gpio' property of node '/soc/mdio@90000[0]' - status (0)
+[   49.574034] of_get_named_gpiod_flags: parsed 'phy-reset-gpio' property of node '/soc/mdio@90000[0]' - status (0)
+[   49.574072] of_get_named_gpiod_flags: parsed 'phy-reset-gpio' property of node '/soc/mdio@90000[0]' - status (0)
+[   49.574082] of_get_named_gpiod_flags: can't parse 'intr-gpio' property of node '/soc/ess-switch@3a000000[0]'
+[   49.574088] of_get_named_gpiod_flags: can't parse 'link-intr-gpio' property of node '/soc/ess-switch@3a000000[0]'
+[   49.574091] ssdk_dt_parse_interrupt[908]:INFO:intr-gpio does not exist
+[   49.631370] malibu_phy_api_ops_init[2073]:INFO:qca probe malibu phy driver succeeded!
+[   49.634944] qca808x_phy_api_ops_init[1864]:INFO:qca probe qca808x phy driver succeeded!
+[   49.683372] Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+[   50.898870] regi_init[2525]:INFO:Initializing HPPE Done!!
+[   50.898964] regi_init[2574]:INFO:qca-ssdk module init succeeded!
+[   50.904333] EDMA ver 1 hw init
+[   50.909599] EDMA HW Reset completed succesfully
+[   50.912217] Num rings - TxDesc:1 (23-23) TxCmpl:1 (7-7)
+[   50.916609] RxDesc:1 (15-15) RxFill:1 (7-7)
+[   50.922275] dp1: ppe offload disabled: 0 for macid 1
+[   50.925986] dp1: Switch attached to macid 1 status: 0
+[   50.931284] nss-dp 3a001000.dp1 (unnamed net_device) (uninitialized): netif_napi_add() called with weight 100
+[   50.936460] tun: Universal TUN/TAP device driver, 1.6
+[   50.937931] dp2: ppe offload disabled: 0 for macid 2
+[   50.951098] dp2: Switch attached to macid 2 status: 0
+[   50.957997] dp3: ppe offload disabled: 0 for macid 3
+[   50.961102] dp3: Switch attached to macid 3 status: 0
+[   50.968079] dp4: ppe offload disabled: 0 for macid 4
+[   50.971063] dp4: Switch attached to macid 4 status: 0
+[   50.977739] dp6: ppe offload disabled: 0 for macid 6
+[   50.981031] dp6: Switch attached to macid 6 status: 0
+[   51.080557] **********************************************************
+[   51.080585] * NSS Data Plane driver
+[   51.085965] **********************************************************
+[   51.099649] l2tp_core: L2TP core driver, V2.0
+[   51.100576] l2tp_netlink: L2TP netlink interface
+[   51.291511] ffffffc0090dba00: nss core 0 booted successfully
+[   51.311545] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[   51.312406] ffffffc0090e3400: nss core 1 booted successfully
+[   51.314870] loading qca-wifi
+[   51.322355] l2tp_eth: L2TP ethernet pseudowire support (L2TPv3)
+[   51.326207] l2tp_ip: L2TP IP encapsulation support (L2TPv3)
+[   51.331780] l2tp_ip6: L2TP IP encapsulation support for IPv6 (L2TPv3)
+[   51.339043] nat46: module (version 4c5beee236841724219598fabb1edc93d4f08ce5) loaded.
+[   51.349031] gre: GRE over IPv4 demultiplexor driver
+[   51.352031] ip_gre: GRE over IPv4 tunneling driver
+[   51.357661] ip6_gre: GRE over IPv6 tunneling driver
+[   51.368064] rmnet_nss_init(): initializing rmnet_nss
+[   51.391397] cryptodev: driver 1.12 loaded.
+[   51.399168] PPP generic driver version 2.4.2
+[   51.400196] NET: Registered protocol family 24
+[   51.403562] PPTP driver version 0.8.5
+[   51.417064] openvswitch: Open vSwitch switching datapath
+[   51.500718] nss_lag_init[352]:LAG Manager Installed
+[   51.582854] diag: failed to find diag_dload imem node
+[   51.591670] QCA multicast snooping installed successfully
+[   51.593489] <NSS-CRYPTO>:module loaded Build_ID - 03/17/25, 13:11:28 SoC=ipq807x
+[   51.597765] phydev:0000000058afb7e8 register to macsec dev_id: 0
+[   51.684031] nss_macsec init success
+[   51.702384] GACT probability on
+[   51.703439] Mirror/redirect action on
+[   51.712648] u32 classifier
+[   51.712669]     input device check on
+[   51.714258]     Actions configured
+[   51.734171] Simple TC action Loaded
+[   51.745489] fuse: init (API version 7.31)
+[   51.748863] usbcore: registered new interface driver cdc_wdm
+[   51.756983] usbcore: registered new interface driver qmi_wwan_q
+[   51.758850] dwc3-qcom 8af8800.usb3: GPIO lookup for consumer device-power
+[   51.761816] dwc3-qcom 8af8800.usb3: using device tree for GPIO lookup
+[   51.768762] of_get_named_gpiod_flags: can't parse 'device-power-gpios' property of node '/soc/usb3@8A00000[0]'
+[   51.775195] of_get_named_gpiod_flags: can't parse 'device-power-gpio' property of node '/soc/usb3@8A00000[0]'
+[   51.785204] dwc3-qcom 8af8800.usb3: using lookup tables for GPIO lookup
+[   51.795126] dwc3-qcom 8af8800.usb3: No GPIO consumer device-power found
+[   51.803607] dwc3-qcom 8cf8800.usb3: GPIO lookup for consumer device-power
+[   51.808015] dwc3-qcom 8cf8800.usb3: using device tree for GPIO lookup
+[   51.815518] of_get_named_gpiod_flags: can't parse 'device-power-gpios' property of node '/soc/usb3@8C00000[0]'
+[   51.821570] of_get_named_gpiod_flags: can't parse 'device-power-gpio' property of node '/soc/usb3@8C00000[0]'
+[   51.831389] dwc3-qcom 8cf8800.usb3: using lookup tables for GPIO lookup
+[   51.841483] dwc3-qcom 8cf8800.usb3: No GPIO consumer device-power found
+[   51.862318] qcom-qusb2-phy 79000.qusb: 79000.qusb supply vdda-pll not found, using dummy regulator
+[   51.862401] qcom-qusb2-phy 79000.qusb: 79000.qusb supply vdda-phy-dpdm not found, using dummy regulator
+[   51.871088] qcom-qusb2-phy 79000.qusb: Registered Qcom-QUSB2 phy
+[   51.880505] qcom-qusb2-phy 59000.qusb: 59000.qusb supply vdda-pll not found, using dummy regulator
+[   51.882836] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[   51.886059] qcom-qusb2-phy 59000.qusb: 59000.qusb supply vdda-phy-dpdm not found, using dummy regulator
+[   51.894617] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[   51.900432] qcom-qusb2-phy 59000.qusb: Registered Qcom-QUSB2 phy
+[   51.910687] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe65 hci version 0x110 quirks 0x0000000002010010
+[   51.923462] mhi_init Quectel_Linux_PCIE_MHI_Driver_V1.3.5
+[   51.924037] xhci-hcd xhci-hcd.0.auto: irq 107, io mem 0x08a00000
+[   51.938502] hub 1-0:1.0: USB hub found
+[   51.944157] hub 1-0:1.0: 1 port detected
+[   51.948347] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[   51.951679] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[   51.951818] usbcore: registered new interface driver cdc_acm
+[   51.957012] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0 SuperSpeed
+[   51.964377] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[   51.971038] usbcore: registered new interface driver cdc_ether
+[   51.976735] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[   51.991047] hub 2-0:1.0: USB hub found
+[   51.991502] usbcore: registered new interface driver cdc_ncm
+[   51.998805] hub 2-0:1.0: 1 port detected
+[   52.009883] usbcore: registered new interface driver huawei_cdc_ncm
+[   52.012657] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   52.017994] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 3
+[   52.023983] xhci-hcd xhci-hcd.1.auto: hcc params 0x0220fe65 hci version 0x110 quirks 0x0000000002010010
+[   52.031191] xhci-hcd xhci-hcd.1.auto: irq 108, io mem 0x08c00000
+[   52.041194] hub 3-0:1.0: USB hub found
+[   52.046786] hub 3-0:1.0: 1 port detected
+[   52.047140] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[   52.050785] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   52.059058] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 4
+[   52.064503] xhci-hcd xhci-hcd.1.auto: Host supports USB 3.0 SuperSpeed
+[   52.072111] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[   52.079183] hub 4-0:1.0: USB hub found
+[   52.086948] hub 4-0:1.0: 1 port detected
+[   52.101810] nf_conntrack_rtsp v0.7 loading
+[   52.117060] nf_nat_rtsp v0.7 loading
+[   52.154524] PPP MPPE Compression module registered
+[   52.157872] usbcore: registered new interface driver rndis_host
+[   52.163882] spi_gpio led-spi: GPIO lookup for consumer mosi
+[   52.164020] spi_gpio led-spi: using device tree for GPIO lookup
+[   52.169658] of_get_named_gpiod_flags: parsed 'mosi-gpios' property of node '/led-spi[0]' - status (0)
+[   52.175754] spi_gpio led-spi: GPIO lookup for consumer miso
+[   52.184890] spi_gpio led-spi: using device tree for GPIO lookup
+[   52.190317] of_get_named_gpiod_flags: can't parse 'miso-gpios' property of node '/led-spi[0]'
+[   52.196157] of_get_named_gpiod_flags: can't parse 'miso-gpio' property of node '/led-spi[0]'
+[   52.204869] of_get_named_gpiod_flags: can't parse 'gpio-miso' property of node '/led-spi[0]'
+[   52.213592] spi_gpio led-spi: using lookup tables for GPIO lookup
+[   52.221788] spi_gpio led-spi: No GPIO consumer miso found
+[   52.221794] spi_gpio led-spi: GPIO lookup for consumer sck
+[   52.233158] spi_gpio led-spi: using device tree for GPIO lookup
+[   52.238530] of_get_named_gpiod_flags: parsed 'sck-gpios' property of node '/led-spi[0]' - status (0)
+[   52.246405] 74x164 spi1.0: GPIO lookup for consumer enable
+[   52.253762] 74x164 spi1.0: using device tree for GPIO lookup
+[   52.259036] of_get_named_gpiod_flags: parsed 'enable-gpios' property of node '/led-spi/led-gpio@0[0]' - status (0)
+[   52.265137] gpiochip_find_base: found new base at 426
+[   52.275270] gpio gpiochip1: (74hc595): added GPIO chardev (254:1)
+[   52.280337] gpiochip_setup_dev: registered GPIOs 426 to 441 on device: gpiochip1 (74hc595)
+[   52.286632] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/power[0]' - status (0)
+[   52.294366] no flags found for gpios
+[   52.306159] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/wifi[0]' - status (0)
+[   52.307088] no flags found for gpios
+[   52.316640] usbcore: registered new interface driver uas
+[   52.318550] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/internet[0]' - status (0)
+[   52.324893] no flags found for gpios
+[   52.329111] usbcore: registered new interface driver usbserial_generic
+[   52.334219] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/5g-red[0]' - status (0)
+[   52.338621] usbserial: USB Serial support registered for generic
+[   52.344099] no flags found for gpios
+[   52.344293] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/5g-green[0]' - status (0)
+[   52.362913] no flags found for gpios
+[   52.372259] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/5g-blue[0]' - status (0)
+[   52.375761] no flags found for gpios
+[   52.385107] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/signal-red[0]' - status (0)
+[   52.388522] no flags found for gpios
+[   52.398236] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/signal-green[0]' - status (0)
+[   52.401591] no flags found for gpios
+[   52.411241] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/signal-blue[0]' - status (0)
+[   52.414734] no flags found for gpios
+[   52.424423] of_get_named_gpiod_flags: parsed 'gpios' property of node '/leds/phone[0]' - status (0)
+[   52.427842] no flags found for gpios
+[   52.473239] xt_time: kernel timezone is +0200
+[   52.476505] usbcore: registered new interface driver cdc_mbim
+[   52.490964] usbcore: registered new interface driver option
+[   52.491144] usbserial: USB Serial support registered for GSM modem (1-port)
+[   52.497055] usbcore: registered new interface driver qcserial
+[   52.502665] usbserial: USB Serial support registered for Qualcomm USB modem
+[   52.508749] kmodloader: done loading kernel modules from /etc/modules.d/*
+[   53.169205] usb 4-1: new SuperSpeed Gen 1 USB device number 2 using xhci-hcd
+[   53.364168] option 4-1:1.0: GSM modem (1-port) converter detected
+[   53.364367] usb 4-1: GSM modem (1-port) converter now attached to ttyUSB0
+[   53.369983] option 4-1:1.2: GSM modem (1-port) converter detected
+[   53.376292] usb 4-1: GSM modem (1-port) converter now attached to ttyUSB1
+[   53.384241] option 4-1:1.3: GSM modem (1-port) converter detected
+[   53.389839] usb 4-1: GSM modem (1-port) converter now attached to ttyUSB2
+[   53.414464] qmi_wwan_q 4-1:1.4: cdc-wdm0: USB WDM device
+[   53.417213] qmi_wwan_q 4-1:1.4: Quectel RG500Q-EA work on RawIP mode
+[   53.425381] qmi_wwan_q 4-1:1.4: rx_urb_size = 31744
+[   53.429314] qmi_wwan_q 4-1:1.4 wwan0: register 'qmi_wwan_q' at usb-xhci-hcd.1.auto-1, RMNET/USB device, fe:e0:82:11:61:84
+[   53.434158] net wwan0 wwan0_1: NSS context created
+[   53.444521] net wwan0: qmap_register_device wwan0_1
+[   53.736854] configuring additional NSS pbufs
+[   53.771676] additional pbufs of size 9003008 got added to NSS
+[   54.936654] wlan: [3255:I:ANY] qdf_ini_parse: INI values read: 104
+[   54.936685] wlan: [3255:I:ANY] qdf_ini_parse: INI file parse successful
+[   54.946162] wlan: [3255:I:ANY] qdf_ini_parse: INI values read: 66
+[   54.948266] wlan: [3255:I:ANY] qdf_ini_parse: INI file parse successful
+[   54.954641] wlan: [3255:I:SAWF] wlan_sawf_init: SAWF: SAWF ctx is initialized
+[   54.963561] br-lan: port 1(eth0) entered blocking state
+[   54.968345] br-lan: port 1(eth0) entered disabled state
+[   54.973764] device eth0 entered promiscuous mode
+[   54.985328] br-lan: port 2(eth1) entered blocking state
+[   54.985370] br-lan: port 2(eth1) entered disabled state
+[   54.990533] device eth1 entered promiscuous mode
+[   54.997368] br-lan: port 3(eth2) entered blocking state
+[   54.999583] br-lan: port 3(eth2) entered disabled state
+[   55.004816] device eth2 entered promiscuous mode
+[   55.012125] br-lan: port 4(eth3) entered blocking state
+[   55.014444] br-lan: port 4(eth3) entered disabled state
+[   55.019916] device eth3 entered promiscuous mode
+[   55.022641] br-lan: port 5(eth4) entered blocking state
+[   55.029530] br-lan: port 5(eth4) entered disabled state
+[   55.034926] device eth4 entered promiscuous mode
+[   55.043515] device eth4 left promiscuous mode
+[   55.044571] br-lan: port 5(eth4) entered disabled state
+[   55.142471] br-lan: port 5(eth4) entered blocking state
+[   55.142497] br-lan: port 5(eth4) entered disabled state
+[   55.147289] device eth4 entered promiscuous mode
+[   55.153104] device eth4 left promiscuous mode
+[   55.157282] br-lan: port 5(eth4) entered disabled state
+[   55.262847] br-lan: port 5(eth4) entered blocking state
+[   55.262876] br-lan: port 5(eth4) entered disabled state
+[   55.267670] device eth4 entered promiscuous mode
+[   55.274140] Bringup wifi 
+[   55.659716] ECM init
+[   55.659785] ECM database jhash random seed: 0xad3f4d7b
+[   55.769617] ECM init complete
+[   55.793174] ECM OVS Test INIT
+[   56.647129] smart_antenna: module license 'Proprietary' taints kernel.
+[   56.647161] Disabling lock debugging due to kernel taint
+[   56.662550] ./IPQ8074/regdb.bin
+[   56.845675] mc_attach: enabled snooping on br-lan.
+[   56.905124] wlan: [5928:I:ANY] =======ol_if_register_wifi3_0==========
+[   56.905124] 
+[   56.905165] wlan: [5928:I:ANY] osif_nss_register_module: NSS wifi ops registered for target_type:1 with soc_ops:00000000557f686a
+[   56.912127] remoteproc remoteproc0: powering up cd00000.q6v5_wcss
+[   56.930247] remoteproc remoteproc0: Booting fw image IPQ8074/q6_fw.mdt, size 668
+[   56.930338] wlan: [5928:I:ANY] ol_ath_wifi_ssr: SSR event 2 bus_type 1
+[   58.068551] Subsystem error monitoring/handling services are up
+[   58.068621] qcom-q6v5-wcss-pil cd00000.q6v5_wcss: QDSP6SS Version : 0x100a0000
+[   58.074481] qcom-q6v5-wcss-pil cd00000.q6v5_wcss: WCSS Version : 0x10000000
+[   58.122459] cnss[2]: INFO: QMI WLFW service connected, state: 0x10001
+[   58.127868] diag: In diag_send_feature_mask_update, control channel is not open, p: 2, 00000000e2150853
+[   58.127913] diag: In diag_send_peripheral_buffering_mode, buffering flag not set for 2
+[   58.137374] cnss[2]: INFO: FW INI CFG file IPQ8074/fw_ini_cfg.bin is present
+[   58.138523] diag: In diag_send_peripheral_buffering_mode, buffering flag not set for 2
+[   58.145705] cnss[2]: INFO: device_id : 0xfffe mem mode : [0]
+[   58.164473] cnss[2]: INFO: platform name: Arcadyan AW1000 IPQ8074
+[   58.166713] cnss[2]: INFO: FW File 0 download
+[   58.177134] cnss[2]: ERR: WARNING: More memory is reserved.Reserved size 0x5f00000,Requested size 0x5dec000.
+[   58.184231] cnss[2]: INFO: Target capability: chip_id: 0x0, chip_family: 0x0, board_id: 0x270, soc_id: 0xffffffff, fw_version: 0x2c0584a5, fw_build_timestamp: 2024-07-11 16:11, otp_version: 0x0 eeprom_caldata_read_timeout 0s bdf_dnld_method 1 regdb_mandatory 0 rxgainlut_support 0
+[   58.192406] cnss[2]: INFO: Downloading BDF: IPQ8074/regdb.bin, size: 24348
+[   58.211400] wlan: [5928:I:ANY] ol_ath_wifi_ssr: SSR event 3 bus_type 1
+[   58.217496] wlan: [5928:I:ANY] ol_ath_wifi_ssr: Waiting for probe lock
+[   58.225469] wlan: [5928:I:ANY] ol_ath_wifi_ssr: Starting Driver Probe
+[   58.227854] cnss[2]: INFO: Downloading BDF: IPQ8074/bdwlan.b270, size: 131072
+[   58.230799] cnss[2]: INFO: Waiting for FW ready. Device: 0xfffe, FW ready timeout: 15 seconds
+[   58.303024] cnss[2]: INFO: Downloading BDF: IPQ8074/caldata.bin, size: 131072
+[   58.480096] cnss[2]: INFO: FW ready received for device 0xfffe
+[   58.480302] wlan: [5928:I:ANY] pld_ahb_wlan_enable: cnss_mode: Mission mode 
+[   58.487288] cnss[2]: INFO: Sending mode message, mode: MISSION(0), state: 0x10007
+[   58.505085] wlan: [5928:D:dfs] WLAN_DEBUG_DFS1 : dfs_psoc_obj_create_notification: DFS obj attach to psoc successfully
+[   58.508505] wlan: [5928:I:ANY] qdf_ini_parse: INI values read: 0
+[   58.516041] wlan: [5928:I:ANY] qdf_ini_parse: INI file parse fail: invalid file format
+[   58.521808] wlan: [5928:E:CONFIG] cfg_ini_parse_to_store: Failed to parse *.ini file @ QCA8074.ini; status:4
+[   58.544200] wlan: [5928:I:ANY] qdf_ini_parse: INI values read: 83
+[   58.544230] wlan: [5928:I:ANY] qdf_ini_parse: INI file parse successful
+[   58.550908] wlan: [5928:I:ANY] qdf_ini_section_parse: INI values parse successful read: 4 from section 512M_OR_DP_MON_4CHAIN
+[   58.557015] wlan: [5928:I:ANY] qdf_ini_section_parse: INI values parse successful read: 2 from section DBS-NSS-RING
+[   58.567731] wlan: [5928:I:ANY] osif_nss_wifi_soc_setup: nss-wifili:#1 register wifili function for soc 24
+[   58.578024] wlan: [5928:I:ANY] osif_nss_wifi_soc_setup: nss register id -1 nss config 3 Target Type 18 
+[   58.605319] wlan: [5928:I:ANY] ol_target_init_complete: CDP soc attach success
+[   58.605357] wlan: [5928:I:ANY] ol_target_init_complete: Soc attach success NSS config 0 
+[   58.612667] wlan: [1880:I:TIF] HE_CAP Info = 9a18010d
+[   58.620556] wlan: [1880:I:TIF] Num HW modes = 1
+[   58.625855] wlan: [1880:I:TIF] Num PHY = 2
+[   58.629682] wlan: [1880:I:TIF] FW Build Version (Ext.) = 0
+[   58.633938] wlan: [1880:I:TIF] HDL Version: MajorVersion.MinorVersion = 0.0
+[   58.638614] wlan: [1880:I:TIF] Preferred HW Mode = 1 Num Radios = 2
+[   58.646810] wlan: [1880:I:TIF] init_deinit_add_11ax_modes: hw_mode_id = 1 phy_id = 0 wireless modes = f97f9001
+[   58.651888] wlan: [1880:W:TIF] add_11ax_mode_flags: 11AX wireless modes are not populated by the target in reg capabilities, adding 11AX wireless modes
+[   58.661838] wlan: [1880:I:TIF] init_deinit_add_11ax_modes: hw_mode_id = 1 phy_id = 1 wireless modes = 680688c
+[   58.675324] wlan: [1880:I:ANY] BDF version: 1 CAL version: 1 Status: 0
+[   58.685471] wlan: [1880:E:TIF] tgt_if_set_reg_afc_configure: service afc support not enable
+[   58.692624] wlan: [1880:I:TIF] init_deinit_alloc_pdevs: CDP PDEV ATTACH success
+[   58.700826] wlan: [1880:I:TIF] init_deinit_alloc_pdevs: CDP PDEV ATTACH success
+[   58.707522] wlan: [1880:I:ANY] qdf_ini_section_parse: INI values parse successful read: 5 from section 5G
+[   58.714653] wlan: [1880:I:TIF] ol_ath_ema_init_ctx: Limit max_mgmt_frm_sz to 1.5K for target_type:24
+[   58.724388] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx: rnr_field_size_limit_override:0
+[   58.733546] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx: rnr_field_size_limit_override & RNR_SIZE_LIMIT_OVERRIDE_MASK:>0
+[   58.741295] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx: mbss_ie_enable :0x0 
+[   58.752303] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx: max_pp: 1
+[   58.758746] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.765075] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.774856] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.785296] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.795358] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.805341] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.815550] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.826392] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.835285] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.845336] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.855408] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.865497] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.875545] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.885635] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.895691] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.903628] S99ipq-done (8219): drop_caches: 3
+[   58.905776] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   58.920318] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_config_low: 0x77777777
+[   58.930326] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_config_high: 0x77777777
+[   58.940056] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size_limit: 128
+[   58.949496] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_optional_ie_config: optional_ie_size_limit: 166
+[   58.958316] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx:  max_pp:1  max_ngroups:1 
+[   58.967565] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: max mgmt frame size :1500
+[   58.975009] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: common_part_sz      :800
+[   58.983442] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: max_non_tx_sz       :700
+[   58.991501] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: max_non_tx_sz_limit :294
+[   58.999831] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: max_pp              :1
+[   59.008150] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: no_of_ntx_vap_in_1_bcn:   2
+[   59.016503] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: no_of_ntx_vap_in_pp_bcns: 2
+[   59.025012] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: no_of_vaps_in_1_grp:      2
+[   59.033604] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: max_ngroup:               8
+[   59.042195] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: grp_sz:                   2
+[   59.050831] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx: rnr_6ghz_adv_override:0
+[   59.061064] wlan: [1880:I:ANY] qdf_ini_section_parse: INI values parse successful read: 5 from section 2G
+[   59.066577] wlan: [1880:I:TIF] ol_ath_ema_init_ctx: Limit max_mgmt_frm_sz to 1.5K for target_type:24
+[   59.076275] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx: rnr_field_size_limit_override:0
+[   59.085452] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx: rnr_field_size_limit_override & RNR_SIZE_LIMIT_OVERRIDE_MASK:>0
+[   59.093162] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx: mbss_ie_enable :0x0 
+[   59.103848] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx: max_pp: 1
+[   59.110686] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.116910] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.126766] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.136826] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.146885] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.149489] nss-dp 3a001000.dp1 eth0: PHY Link up speed: 1000
+[   59.156963] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.167928] br-lan: port 1(eth0) entered blocking state
+[   59.172920] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.172927] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.182806] br-lan: port 1(eth0) entered forwarding state
+[   59.188006] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.199666] IPv6: ADDRCONF(NETDEV_CHANGE): br-lan: link becomes ready
+[   59.208149] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.230203] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.240121] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.250168] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.260319] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.270319] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.280396] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size: 0 ven_ie_size_nibble: 7
+[   59.290462] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_config_low: 0x77777777
+[   59.300531] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_config_high: 0x77777777
+[   59.310238] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_vendor_ie_config: vendor_ie_size_limit: 128
+[   59.319718] wlan: [1880:I:MBSSIE] ol_ath_ema_sanitize_optional_ie_config: optional_ie_size_limit: 166
+[   59.328545] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx:  max_pp:1  max_ngroups:1 
+[   59.337785] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: max mgmt frame size :1500
+[   59.345245] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: common_part_sz      :800
+[   59.354396] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: max_non_tx_sz       :700
+[   59.361836] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: max_non_tx_sz_limit :294
+[   59.370090] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: max_pp              :1
+[   59.378367] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: no_of_ntx_vap_in_1_bcn:   2
+[   59.386772] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: no_of_ntx_vap_in_pp_bcns: 2
+[   59.395243] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: no_of_vaps_in_1_grp:      2
+[   59.403855] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: max_ngroup:               8
+[   59.412427] wlan: [1880:I:MBSSIE] ol_ath_ema_determine_max_ngroup: grp_sz:                   2
+[   59.421012] wlan: [1880:I:MBSSIE] ol_ath_ema_init_ctx: rnr_6ghz_adv_override:0
+[   59.429627] wlan: [1880:I:TIF] init_deinit_get_total_num_ema_vaps: num_radios: 2
+[   59.436791] wlan: [1880:I:TIF] init_deinit_get_total_num_ema_vaps: ema_max_vap_cnt: 0
+[   59.444379] wlan: [1880:I:TIF] init_deinit_get_total_num_vdevs_for_soc: num_vdevs: 34
+[   59.452096] wlan: [1880:I:TIF] init_deinit_get_total_num_ema_vaps: num_radios: 2
+[   59.459911] wlan: [1880:I:TIF] init_deinit_get_total_num_ema_vaps: ema_max_vap_cnt: 0
+[   59.467347] wlan: [1880:I:TIF] init_deinit_get_total_num_vdevs_for_soc: num_vdevs: 34
+[   59.475108] wlan: [1880:I:TIF] init_deinit_get_total_num_ema_vaps: num_radios: 2
+[   59.482898] wlan: [1880:I:TIF] init_deinit_get_total_num_ema_vaps: ema_max_vap_cnt: 0
+[   59.490377] wlan: [1880:I:TIF] init_deinit_get_total_num_vdevs_for_soc: num_vdevs: 34
+[   59.498084] wlan: [1880:I:TIF] init_deinit_get_total_num_ema_vaps: num_radios: 1
+[   59.505915] wlan: [1880:I:TIF] init_deinit_get_total_num_ema_vaps: ema_max_vap_cnt: 0
+[   59.513376] wlan: [1880:I:TIF] init_deinit_get_total_num_vdevs_for_soc: num_vdevs: 17
+[   59.521469] wlan: [1880:I:TIF] init_deinit_update_pdev_tgt_info: CDP PDEV INIT success
+[   59.529419] wlan: [1880:I:TIF] init_deinit_update_pdev_tgt_info: CDP PDEV INIT success
+[   59.945708] wlan: [5928:I:ANY] ath_get_radio_index: Error: Could not match the device name : wifi%d
+[   59.945749] wlan: [5928:E:NSS] [nss-wifili]: pdev:00000000adc94ade radio_ifnum:29 scheme_id:0 radio_priority:1 
+[   59.959009] wlan: [5928:E:TIF] target_if_lro_hash_config: pdev with id 0 is NULL
+[   59.963718] wlan: [5928:I:ANY] ath_get_radio_index: Error: Could not match the device name : wifi%d
+[   59.971314] wlan: [5928:E:NSS] [nss-wifili]: pdev:0000000077e7dd02 radio_ifnum:30 scheme_id:1 radio_priority:0 
+[   59.985417] wlan: [5928:E:TIF] target_if_lro_hash_config: pdev with id 1 is NULL
+[   59.990472] wlan: [5928:I:MSCS] qca_mscs_module_init: 
+[   59.990472] ****QCA MSCS Initialization Done**** SoC 0000000003628286
+[   59.997799] wlan: [5928:I:ANY] __ol_ath_attach: soc(0x0000000003628286): soc0 pdev: wifi0
+[   60.010229] wlan: [5928:I:COHOSTED_BSS] COHOSTED BSSID IND disabled for pdev[0]
+[   60.017365] wlan: [5928:I:TIF] ol_ath_pdev_regdmn_init:  phy id = 0 Modes supported
+[   60.024498] wlan: [5928:I:TIF] ol_ath_pdev_regdmn_init:  11b = 0 11g = 0 11a = 1 11n = 1 11ac = 1 11ax = 1
+[   60.032130] wlan: [5928:I:TIF] ol_ath_pdev_regdmn_init:  Reg cap - phy_id = 0 supp_bnd = 2, modes = 793f9001, lo_2ghz = 0, hi_2ghz = 0 lo_5ghz = 4900, hi_5ghz = 5920
+[   60.041927] wlan: [5928:E:ANY] ol_ath_dev_attach: MBSSID or co-hosted mode is required for Macreq Ext
+[   60.056692] wlan: [5928:I:ANY] ol_ath_dev_attach: Macreq Ext enabled=0
+[   60.066027] wlan: [5928:I:MBSSIE] ieee80211_mbss_attach: :>
+[   60.072312] wlan: [5928:I:MBSSIE] ieee80211_mbss_attach: :<ret:0
+[   60.079148] wlan: [5928:I:ANY] wlan_scan_update_channel_list: num_chan: 25
+[   60.084165] wlan: [0:E:NSS] [nss-wifili]: NSS Wifili DBDC Repeater enable message passed
+[   60.085594] wlan: [5928:I:ANY] ol_ath_pdev_host_trig_txbf_sounding_init: TxBF Standalone Sounding is not enabled
+[   60.099056] wlan: [5928:I:ANY] ol_ath_pri20_cfg_blockchanlist_parse: cfg block channel list is empty
+[   60.109193] wlan: [5928:I:ANY] ol_ath_enable_fraglist: Enabled Fraglist bit for the radio wifi0 features 41 
+[   60.119280] wlan: [5928:I:ANY] __ol_ath_attach: soc(0x0000000003628286): soc0 pdev: wifi1
+[   60.128998] wlan: [5928:I:COHOSTED_BSS] COHOSTED BSSID IND disabled for pdev[1]
+[   60.136123] wlan: [5928:I:TIF] ol_ath_pdev_regdmn_init:  phy id = 1 Modes supported
+[   60.143281] wlan: [5928:I:TIF] ol_ath_pdev_regdmn_init:  11b = 1 11g = 1 11a = 0 11n = 1 11ac = 1 11ax = 1
+[   60.150927] wlan: [5928:I:TIF] ol_ath_pdev_regdmn_init:  Reg cap - phy_id = 1 supp_bnd = 1, modes = 680680c, lo_2ghz = 2312, hi_2ghz = 2732 lo_5ghz = 0, hi_5ghz = 0
+[   60.160739] wlan: [5928:E:ANY] ol_ath_dev_attach: MBSSID or co-hosted mode is required for Macreq Ext
+[   60.175486] wlan: [5928:I:ANY] ol_ath_dev_attach: Macreq Ext enabled=0
+[   60.184774] wlan: [5928:I:MBSSIE] ieee80211_mbss_attach: :>
+[   60.191019] wlan: [5928:I:MBSSIE] ieee80211_mbss_attach: :<ret:0
+[   60.196666] wlan: [5928:I:ANY] acfg_attach: Offload using existing sock 00000000afaad87e
+[   60.203104] wlan: [5928:I:ANY] wlan_scan_update_channel_list: num_chan: 11
+[   60.210933] wlan: [0:E:NSS] [nss-wifili]: NSS Wifili DBDC Repeater enable message passed
+[   60.212475] wlan: [5928:I:ANY] ol_ath_pdev_host_trig_txbf_sounding_init: TxBF Standalone Sounding is not enabled
+[   60.225931] wlan: [5928:I:ANY] ol_ath_pri20_cfg_blockchanlist_parse: cfg block channel list is empty
+[   60.236030] wlan: [5928:I:ANY] ol_ath_enable_fraglist: Enabled Fraglist bit for the radio wifi1 features 41 
+[   60.246063] wlan: [5928:I:Dynamic Mode Change] ol_ath_check_and_reconfig_hw_mode: Running with HW mode = 1
+[   60.255419] remoteproc remoteproc0: remote processor cd00000.q6v5_wcss is now up
+[   60.419032] ***** Fast boot VAP mode is enabled wifi1 *****
+[   60.424957] ***** Fast boot VAP mode is enabled wifi0 *****
+[   60.501206] wlan: [8904:I:ANY] osif_nss_register_module: NSS wifi ops registered for target_type:0 with soc_ops:0000000035457ddd
+[   60.502181] wlan: [8904:I:ANY] init_ath_pci_2_0: 6ath_ol_pci_2_0:  (Atheros/multi-bss)
+[   61.401184] CALLER: /bin/sh/lib/wifi/launch_vap.shwifi0, PID: 8780 arg: enable wifi0 
+[   61.410059] CALLER: /bin/sh/lib/wifi/launch_vap.shwifi1, PID: 8783 arg: enable wifi1 
+[   61.649222] wlan: [10534:I:ANY] wlan_scan_update_channel_list: num_chan: 11
+[   61.649320] wlan: [10534:I:ANY] number of channels: 2G = 11 5G = 0, 6G = 0
+[   61.656615] wlan: [10533:I:ANY] wlan_scan_update_channel_list: num_chan: 25
+[   61.662521] wlan: [10533:E:ANY] dfs_init_chan_state_array: channel state array initialized
+[   61.670022] wlan: [10533:I:ANY] wlan_scan_update_channel_list: num_chan: 25
+[   61.677708] wlan: [10533:I:ANY] number of channels: 2G = 0 5G = 25, 6G = 0
+[   61.878543] wlan: [10631:I:ANY] ol_ath_set_config_param: set TXBF_SND_PERIOD: val 100 stat 0
+[   61.909781] wlan: [10642:I:ANY] ol_ath_set_config_param: set TXBF_SND_PERIOD: val 100 stat 0
+[   61.947055] wlan: [0:I:RPTR] RPTR disconnect_timeout:10
+[   61.971030] wlan: [0:I:RPTR] RPTR reconfiguration_timeout:60
+[   61.977318] wlan: [0:I:RPTR] RPTR disconnect_timeout:10
+[   61.999998] wlan: [0:I:RPTR] RPTR reconfiguration_timeout:60
+[   62.312375] wlan: [10820:I:MBSSIE] osif_mbssid_sanity_check: mbssid_sanity_ok: YES
+[   62.312413] wlan: [10820:I:ANY] osifp_create_wlan_vap: VDEV Create ec:6c:9a:b8:9e:31
+[   62.318918] wlan: [10820:I:ANY] wlan_vap_create: devhandle=0x00000000adc94ade, opmode=IEEE80211_M_HOSTAP, flags=0x1
+[   62.318918] 
+[   62.327131] wlan: [10820:I:ANY] osif_nss_ol_vap_create: NSS wifi offload VAP create IF 31 nss_id -1 
+[   62.338754] wlan: [10820:I:ANY] osif_nss_ol_vap_create: NSS radio_if 29
+[   62.347822] wlan: [0:I:ANY] osif_nss_vdev_cfg_callback: VDEV configuration success: 0
+[   62.354093] wlan: [10820:I:ANY] osif_nss_ol_vap_create: vap create 00000000ca0b719a : if_num 31 
+[   62.362240] wlan: [10820:E:ANY] wlan_create_attach_vdev_rawsim_ctxt: simulation module not registerd
+[   62.398806] wlan: [10820:I:ANY] WLAN-NSS: VAP NSS ops initialized 
+[   62.398942] wlan: [10820:I:RPTR] RPTR vdev flags:0 pdev flags:0 vdev_id:0 pdev_id:0
+[   62.405083] wlan: [10819:I:MBSSIE] osif_mbssid_sanity_check: mbssid_sanity_ok: YES
+[   62.411518] wlan: [10819:I:ANY] osifp_create_wlan_vap: VDEV Create ec:6c:9a:b8:9e:32
+[   62.419168] wlan: [10819:I:ANY] wlan_vap_create: devhandle=0x0000000077e7dd02, opmode=IEEE80211_M_HOSTAP, flags=0x1
+[   62.419168] 
+[   62.427521] wlan: [10819:I:ANY] osif_nss_ol_vap_create: NSS wifi offload VAP create IF 32 nss_id -1 
+[   62.439912] wlan: [10819:I:ANY] osif_nss_ol_vap_create: NSS radio_if 30
+[   62.448914] wlan: [0:I:ANY] osif_nss_vdev_cfg_callback: VDEV configuration success: 0
+[   62.454380] wlan: [10819:I:ANY] osif_nss_ol_vap_create: vap create 000000003982be7f : if_num 32 
+[   62.462628] wlan: [10819:E:ANY] wlan_create_attach_vdev_rawsim_ctxt: simulation module not registerd
+[   62.498920] wlan: [10819:I:ANY] WLAN-NSS: VAP NSS ops initialized 
+[   62.499055] wlan: [10819:I:RPTR] RPTR vdev flags:0 pdev flags:0 vdev_id:1 pdev_id:1
+[   63.619934] br-lan: port 6(ath0) entered blocking state
+[   63.619966] br-lan: port 6(ath0) entered disabled state
+[   63.625070] device ath0 entered promiscuous mode
+[   63.630223] br-lan: port 7(ath1) entered blocking state
+[   63.634744] br-lan: port 7(ath1) entered disabled state
+[   63.640725] device ath1 entered promiscuous mode
+[   63.645583] device ath0 left promiscuous mode
+[   63.649819] br-lan: port 6(ath0) entered disabled state
+[   63.719934] device ath1 left promiscuous mode
+[   63.720066] br-lan: port 7(ath1) entered disabled state
+[   64.223734] 8021q: adding VLAN 0 to HW filter on device ath1
+[   64.223927] br-lan: port 6(ath1) entered blocking state
+[   64.228477] br-lan: port 6(ath1) entered disabled state
+[   64.233784] device ath1 entered promiscuous mode
+[   64.238740] br-lan: port 6(ath1) entered blocking state
+[   64.243528] br-lan: port 6(ath1) entered forwarding state
+[   64.373776] wlan: [4075:I:ANY] wlan_cfg80211_start_ap: Start ath1 psoc:0 vdev:1
+[   64.373833] wlan: [4075:I:ANY] DES SSID SET=Arcadyan_2.4Ghz
+[   64.380038] wlan: [4075:I:ANY] desired hw mode: 29
+[   64.385635] wlan: [4075:I:ANY] wlan_cfg80211_chan_to_phymode: band:0 width: 2 channel_cfreq: 2412 center_freq1: 2422 chandef.center_freq2: 0 flags: 416
+[   64.390463] wlan: [4075:I:ANY] HT Support:000000005cb76857 VHT Support:00000000188e0d72 HE Support:00000000b58361e9
+[   64.403860] wlan: [4075:I:ANY] Max supported wireless mode: 3
+[   64.414370] wlan: [4075:I:ANY] Phymode: 26 
+[   64.414370] 
+[   64.420409] wlan: [4075:I:MBSSIE] wlan_cfg80211_start_ap: Set tx-vap ath1: vdev_id:1
+[   64.425878] wlan: [4075:I:ANY] wlan_mbss_start_ht40: HT40 Arg: 0000000000000000
+[   64.439342] 8021q: adding VLAN 0 to HW filter on device ath0
+[   64.440836] br-lan: port 7(ath0) entered blocking state
+[   64.446466] br-lan: port 7(ath0) entered disabled state
+[   64.451944] device ath0 entered promiscuous mode
+[   64.456799] br-lan: port 7(ath0) entered blocking state
+[   64.461510] br-lan: port 7(ath0) entered forwarding state
+[   64.468887] wlan: [4075:I:ANY] wlan_cfg80211_start_ap: Start ath0 psoc:0 vdev:0
+[   64.472358] wlan: [4075:I:ANY] DES SSID SET=Arcadyan_5Ghz
+[   64.479497] wlan: [4075:I:ANY] wlan_cfg80211_chan_to_phymode: band:1 width: 5 channel_cfreq: 5200 center_freq1: 5250 chandef.center_freq2: 0 flags: 0
+[   64.485130] wlan: [4075:I:ANY] HT Support:000000004b9cd318 VHT Support:00000000f497d897 HE Support:00000000a5916fcb
+[   64.498318] wlan: [4075:I:ANY] Max supported wireless mode: 3
+[   64.508381] wlan: [4075:I:ANY] Phymode: 31 
+[   64.508381] 
+[   64.514429] wlan: [4075:I:ANY] wlan_cfg80211_chan_to_phymode: band:1 width: 5 channel_cfreq: 5200 center_freq1: 5250 chandef.center_freq2: 0 flags: 0
+[   64.519969] wlan: [4075:I:ANY] HT Support:000000004b9cd318 VHT Support:00000000f497d897 HE Support:00000000a5916fcb
+[   64.533246] wlan: [4075:I:ANY] Max supported wireless mode: 3
+[   64.543502] wlan: [4075:I:ANY] Phymode: 31 
+[   64.543502] 
+[   64.549709] wlan: [4075:I:MBSSIE] wlan_cfg80211_start_ap: Set tx-vap ath0: vdev_id:0
+[   65.624418] ***** Fast boot VAP is completed... *****
+[   66.604270] qca-wifi loaded
+[   68.337180] wlan: [0:I:ANY] ieee80211_acs_post_event: [EXT] Channel number: 00000000b2488e10
+[   68.337224] wlan: [0:I:ANY] wlan_mbss_done_ht40: Channel: 00000000b2488e10
+[   68.345201] wlan: [3888:I:ANY] ieee80211_ht40intol_evhandler: [EXT] Lock held duration (9ms)
+[   68.503973] wlan: [0:E:ANY] mlme_ext_vap_up: VAP (ath1) ec:6c:9a:b8:9e:32 is up, vdev_id:1 pdev_id:1 psoc_id:0
+[   75.368840] pmd9655_ldo11: disabling
+[  126.587030] wlan: [0:E:ANY] mlme_ext_vap_up: VAP (ath0) ec:6c:9a:b8:9e:31 is up, vdev_id:0 pdev_id:0 psoc_id:0
